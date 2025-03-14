@@ -2,10 +2,12 @@
 import scipy.stats
 import streamlit as st
 import time
+import pandas as pd
 
 st.header('Tossing a Coin')
 
-chart = st.line_chart([0.5])
+data = pd.DataFrame({'value': [0.5]})
+chart = st.line_chart(data)
 
 def toss_coin(n):
 
